@@ -1,6 +1,7 @@
-import Triangle from "./triangle.js";
-
-import "./../css/styles.css";
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
+import Triangle from './triangle.js';
 
 function handleTriangleForm(event) {
   event.preventDefault();
