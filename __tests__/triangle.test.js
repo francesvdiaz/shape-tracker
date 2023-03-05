@@ -1,7 +1,6 @@
-import Triangle from './../src/triangle.js';
+import Triangle from './../src/js/triangle.js';
 
 describe('Triangle', () => {
-
   test('should correctly create a triangle object with three lengths', () => {
     const triangle = new Triangle(2,4,5);
     expect(triangle.side1).toEqual(2);
@@ -23,5 +22,13 @@ describe('Triangle', () => {
   test('should correctly determine whether three lengths make an equilateral triangle', () => {
     const equiTriangle = new Triangle(5,5,5)
     expect(equiTriangle.checkType()).toEqual("equilateral triangle");
+  });
+  test('should say if a triangle is big', () => {
+    const triangle = new Triangle(3,4,5);
+    expect(triangle.bigOrLittle()).toEqual('big');
+  });
+  test('should say if a triangle is little', () => {
+    const triangle = new Triangle(2,4,1);
+    expect(triangle.bigOrLittle()).toEqual('little');
   });
 });
